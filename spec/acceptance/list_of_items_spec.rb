@@ -22,4 +22,9 @@ describe 'list of items' do
     new_list = list.check_off_item('bad_item')
     new_list.checked_items.should_not include('bad_item')
   end
+
+  it 'does not show completed items in items list' do
+    new_list = list.check_off_item('item1')
+    new_list.items.should_not include('item1')
+  end
 end

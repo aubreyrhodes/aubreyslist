@@ -12,7 +12,7 @@ class Checklist
 
   def check_off_item(item)
     if @items.include?(item)
-      Checklist.new(@items, @checked_items << item)
+      Checklist.new(@items - [item], @checked_items << item)
     else
       self
     end
