@@ -12,4 +12,14 @@ describe 'list of items' do
     new_list = list.add_item('item4')
     new_list.items =~ ['item1', 'item2', 'item3', 'item4']
   end
+
+  it 'allows me to mark an item as completed' do
+    new_list = list.check_off_item('item1')
+    new_list.checked_items.should == ['item1']
+  end
+
+  it 'does not allow me to mark items not in the list as completed' do
+    new_list = list.check_off_item('bad_item')
+    new_list.checked_items.should_not include('bad_item')
+  end
 end
