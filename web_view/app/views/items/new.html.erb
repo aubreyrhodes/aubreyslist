@@ -1,0 +1,9 @@
+<h1>New Item</h1>
+
+<%= form_tag items_path, method: :post do %>
+  <%= label_tag 'item', 'Item' %>
+  <%= text_field_tag 'item' %>
+  <div class="actions">
+    <%= submit_tag 'Save' %>
+  </div>
+<% end %>

@@ -1,3 +1,5 @@
 WebView::Application.routes.draw do
-  resources :items
+  resources :items do
+    put :check, on: :collection
+  end
 end

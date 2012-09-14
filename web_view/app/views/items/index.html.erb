@@ -1,6 +1,15 @@
 <h1>Items</h1>
 <ul>
   <%- @items.each do |item| %>
+    <li><%= item %> <%= link_to 'Check', check_items_path(item: item), method: :put %></li>
+  <% end %>
+</ul>
+
+<h3>Completed Items</h3>
+<ul>
+  <%- @checked_items.each do |item| %>
     <li><%= item %></li>
   <% end %>
 </ul>
+
+<p><%= link_to 'New Item', new_item_path %></p>
