@@ -1,0 +1,14 @@
+.items-container
+  .items-list
+    - @items.each do |item|
+      .outer-item
+        .item
+          span.text= item
+          = link_to 'did it', '#', class: 'check'
+        br style="clear: both;"
+    - @checked_items.each do |item|
+      .outer-item
+        .item.checked= item
+        br style="clear: both;"
+  #new-item
+    textarea placeholder="Type Something Todo" autofocus="autofocus"

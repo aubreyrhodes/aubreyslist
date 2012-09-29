@@ -1,0 +1,54 @@
+@import "foundation";
+
+body {
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.items-container{
+  @include outerRow();
+  margin-top: 30px;
+  .outer-item{
+    padding-top: 10px;
+    .item {
+      @include column(8);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      color: #aaa;
+      background-color:rgba(0,0,0,0.5);
+      a.check {
+        float: right;
+        display: none;
+      }
+      &:hover a.check {
+        display: inline;
+      }
+      &.checked {
+        text-decoration: line-through;
+        color: #666;
+      }
+    }
+  }
+  #new-item {
+    @include column(12, true);
+    textarea {
+      margin-top: 40px;
+      border: none;
+      background-color:rgba(0,0,0,0);
+      box-shadow: none;
+      color: #fff;
+      resize: none;
+      width: 100%;
+      min-height: 400px;
+      font-size: 100px;
+    }
+  }
+}
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-moz-placeholder {
+  color: #fff;
+}
