@@ -5,6 +5,7 @@ CheckList::WebView::Application.routes.draw do
 
   match "/auth/:provider/callback" => "sessions#create"
   match "/auth/failure" => "sessions#failure"
+  match "pusher/auth" => "pusher#auth"
 
   resources :sessions, only: :new
 

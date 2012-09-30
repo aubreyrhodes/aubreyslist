@@ -32,3 +32,4 @@ gem 'slim-rails'
 gem 'thin'
 gem 'omniauth-facebook'
 gem 'dotenv', :groups => [:development, :test]
+gem 'pusher'

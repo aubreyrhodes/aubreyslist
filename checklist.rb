@@ -7,7 +7,7 @@ class Checklist
   end
 
   def add_item(item)
-    Checklist.new(@items << item, @checked_items)
+    Checklist.new([item] + @items, @checked_items)
   end
 
   def check_off_item(item)

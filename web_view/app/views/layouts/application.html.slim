@@ -22,9 +22,10 @@ head
 
   / Included JS Files
   = javascript_include_tag "application"
+  script src="http://js.pusher.com/1.12/pusher.min.js"
 
   = csrf_meta_tag
 
-body
+body *{ 'data-pusher-id' => Pusher.key, 'data-channel' => "private-#{current_email}" }
   .container
     == yield
