@@ -9,5 +9,5 @@ CheckList::WebView::Application.routes.draw do
   resources :sessions, only: :new
 
   root to: 'items#index'
-  mount Foundation::Icons::Rails::Engine => '/fi'
+  mount Foundation::Icons::Rails::Engine => '/fi' if Rails.env == 'development'
 end
