@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  @@checklists = {}
+  @@checklists ||= {}
 
   def index
     @@checklists[current_email] ||= Checklist.new([])
