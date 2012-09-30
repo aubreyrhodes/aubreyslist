@@ -20,7 +20,7 @@ $ ->
       $.post('/items', { item: val})
   )
 
-  $('.item a.check').on('click', ->
+  $('.items-list').on('click', '.check', ->
     item = $(this).parents('.item')
     val = $('.text', item).text()
     $.post('/items/check', { item: val, _method: 'put' })
