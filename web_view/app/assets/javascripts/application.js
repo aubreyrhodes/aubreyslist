@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require jquery.placeholder.min
 //= require_tree .

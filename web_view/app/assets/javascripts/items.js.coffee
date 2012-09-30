@@ -1,4 +1,5 @@
 $ ->
+  $('input, textarea').placeholder()
   $('#new-item textarea').on('keyup', (event) ->
     if event.which == 13
       val = $.trim($(this).val())

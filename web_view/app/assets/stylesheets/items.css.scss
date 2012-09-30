@@ -23,6 +23,9 @@ body {
         float: right;
         display: none;
       }
+      &:hover:not(.checked){
+        font-size: 28px;
+      }
       &:hover a.check {
         display: inline;
       }
@@ -48,6 +51,9 @@ body {
   }
 }
 ::-webkit-input-placeholder {
+  color: #fff;
+}
+.placeholder {
   color: #fff;
 }
 :-moz-placeholder {
