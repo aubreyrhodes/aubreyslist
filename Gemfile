@@ -22,6 +22,7 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   gem 'zurb-foundation'
+  gem 'foundation-icons-rails'
   gem 'compass-rails'
 end
 
@@ -29,3 +30,5 @@ gem 'jquery-rails'
 gem 'pry'
 gem 'slim-rails'
 gem 'thin'
+gem 'omniauth-facebook'
+gem 'dotenv', :groups => [:development, :test]

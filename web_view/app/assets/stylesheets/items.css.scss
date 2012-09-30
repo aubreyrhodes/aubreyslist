@@ -53,3 +53,18 @@ body {
 :-moz-placeholder {
   color: #fff;
 }
+
+#login-container{
+  @include outerRow();
+  margin-top: 40px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 25px;
+  h1 {
+    color: #fff;
+    margin-bottom: 25px;
+  }
+  .glyph {
+    font-size: 25px;
+  }
+}
